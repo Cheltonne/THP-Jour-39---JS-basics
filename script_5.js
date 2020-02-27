@@ -27,7 +27,7 @@ function HasBeenRented(array)
      }  
   };
 }
-
+console.log("Est-ce que tous les livres ont été au moins empruntés une fois ?");
 if((HasBeenRented(books)) == false)
 {
   console.log("Non.");
@@ -49,7 +49,7 @@ function MostRented(array)
   }
   return most_rented
 }
-
+console.log("Quel est livre le plus emprunté ?");
 console.log(MostRented(books));
 
 function LeastRented(array)
@@ -64,8 +64,10 @@ function LeastRented(array)
   }
   return least_rented 
 }
-
+console.log("Quel est le livre le moins emprunté ?");
 console.log(LeastRented(books));
+
+console.log("Voici le livre avec l\'ID: 873495");
 
 function FindIndX(array)
 {
@@ -83,11 +85,12 @@ function DeleteBook(array)
 }
 
 console.log(DeleteBook(books));
+console.log("Le livre avec l'ID 133712 a bien été supprimé.");
 
 function SortBooks(array)
 {
   array.sort((a, b) => a.title.localeCompare(b.title))
   return array;
 }
-
+console.log("Les livres triés par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé).");
 console.log(SortBooks(books));

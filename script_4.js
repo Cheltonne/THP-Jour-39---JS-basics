@@ -42,7 +42,7 @@ function CurrentAge(array)
 {
   for(let index in array)
   {
-    console.log(2020 - array[index].year);
+    console.log(array[index].first + " " + array[index].last + ": " + (2020 - array[index].year));
   }
 }
 
@@ -56,7 +56,11 @@ function SortAlpha(array)
   return SortedNames.sort();
 }
 
+console.log("Liste des entrepreneurs né dans les années 70:");
 console.log(BornInTheSeventies(entrepreneurs));
+console.log("Prénom et nom des entrepreneurs:");
 console.log(FullName(entrepreneurs));
-console.log(CurrentAge(entrepreneurs));
+console.log("Quel âge aurait chaque inventeur aujourd\'hui ?" );
+CurrentAge(entrepreneurs);
+console.log("Les entrepreneurs triés par ordre alphabétique de leur nom de famille: ");
 console.log(SortAlpha(entrepreneurs));
